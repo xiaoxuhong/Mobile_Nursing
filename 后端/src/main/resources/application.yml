@@ -1,0 +1,38 @@
+server:
+  port: 8080
+  tomcat:
+    uri-encoding: UTF-8
+
+spring:
+  #http配置
+  http:
+    encoding:
+      force: true
+      charset: UTF-8
+      enabled: true
+  # 数据库配置
+  datasource:
+    url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=UTF-8&useSSL=true
+    username: root
+    password: xxh971010XXH
+    driver-class-name: com.mysql.jdbc.Driver
+    tomcat:
+      test-on-borrow: true
+      validation-query: 1
+#mybatis配置
+mybatis:
+  type-aliases-package: com.pei.test.entity
+  mapper-locations: mapper/*.xml
+logging:
+  level:
+    com:
+      pei:
+      test:
+        dao: DEBUG
+
+
+
+
+
+
+
